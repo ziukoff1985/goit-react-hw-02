@@ -1,0 +1,49 @@
+.options_wrap_main {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* .options_wrap_reset {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+} */
+
+.button,
+.button_reset {
+  /* padding: 10px 30px; */
+  width: 100px;
+  height: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.button_reset {
+  display: block;
+  margin: 20px auto 0;
+  cursor: pointer;
+}
+
+.button_reset:active {
+  transform: translateY(5px);
+  box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.button_reset:hover {
+  background-color: rgb(246, 159, 159);
+}
+
+.button:active {
+  transform: translateY(5px);
+  box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+  background-color: rgb(187, 248, 123);
+}
