@@ -38,9 +38,9 @@ function App() {
   // Обчислюємо загальну кількість відгуків
   const totalFeedback = good + neutral + bad;
 
-  // Створюємо функцію updateFeedback для рендеру сторінки після внесення змін
-  // Функція приймає один аргумент feedbackType - рядок з типом відгуку ("good", "neutral", "bad")
-  // Функція для оновлення стану відгуку, збільшує значення певного типу відгуку на 1
+  const positivePercentage =
+    totalFeedback > 0 ? Math.round((good / totalFeedback) * 100) : 0;
+
   const updateFeedback = feedbackType => {
     setOptions(prevOptions => ({
       ...prevOptions,
@@ -57,18 +57,7 @@ function App() {
   // Рендеримо компоненти на сторінці
   return (
     <>
-      {/* Компонент Description для заголовка та опису, передаємо через проп children */}
-      <Description>
-        <h2>Sip Happens Café</h2>
-        <p>
-          Please leave your feedback about our service by selecting one of the
-          options below.
-        </p>
-      </Description>
-      {/* Компонент Options з кнопками для відгуків, пропси:
-          - totalFeedback (загальна кіль-ть відгуків)
-          - onLeaveFeedback (фун-я для ререндинга і оновлення к-ті відгуків)
-          - onReset (фун-я для обнулення значень відгуків)*/}
+      <Description />
       <Options
         totalFeedback={totalFeedback}
         onLeaveFeedback={updateFeedback}
@@ -80,7 +69,11 @@ function App() {
           - якщо є хоча б один відгук - відображається статистика відгуків
           - якщо немає відгуків - повідомлення про їх відсутність (компонент Notification)*/}
       {totalFeedback > 0 ? (
-        <Feedback totalFeedback={totalFeedback} {...options} />
+        <Feedback
+          totalFeedback={totalFeedback}
+          positivePercentage={positivePercentage}
+          {...options}
+        />
       ) : (
         <Notification />
       )}
