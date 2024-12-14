@@ -4,12 +4,6 @@
   justify-content: center;
 }
 
-/* .options_wrap_reset {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-} */
-
 .button,
 .button_reset {
   width: 100px;

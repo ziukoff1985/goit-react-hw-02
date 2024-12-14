@@ -3,6 +3,7 @@ import Description from './components/Description/Description';
 import Options from './components/Options/Options';
 import Feedback from './components/Feedback/Feedback';
 import Notification from './components/Notification/Notification';
+import feedbackInitialState from './assets/feedBack.json';
 import './App.css';
 
 function App() {
@@ -11,11 +12,7 @@ function App() {
 
     return savedFeedbackData
       ? JSON.parse(savedFeedbackData)
-      : {
-          good: 0,
-          neutral: 0,
-          bad: 0,
-        };
+      : feedbackInitialState;
   });
 
   useEffect(() => {
@@ -34,11 +31,7 @@ function App() {
   };
 
   const resetFeedback = () => {
-    setOptions({
-      good: 0,
-      neutral: 0,
-      bad: 0,
-    });
+    setOptions(feedbackInitialState);
   };
 
   return (
