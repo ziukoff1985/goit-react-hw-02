@@ -2,7 +2,7 @@ import styles from './Options.module.css';
 
 const Options = ({ onLeaveFeedback, onReset, totalFeedback }) => {
   return (
-    <>
+    <div className={styles.options_wrap}>
       <div className={styles.options_wrap_main}>
         <button
           onClick={() => onLeaveFeedback('good')}
@@ -30,7 +30,7 @@ const Options = ({ onLeaveFeedback, onReset, totalFeedback }) => {
           </button>
         )}
       </div>
-    </>
+    </div>
   );
 };
 
