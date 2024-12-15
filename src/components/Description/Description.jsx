@@ -1,5 +1,6 @@
 import styles from './Description.module.css';
 
+// Оголошуємо компонент Options, який відмальовує заголовок
 const Description = () => {
   return (
     <div className={styles.description}>
