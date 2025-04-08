@@ -70,6 +70,9 @@ function App() {
   return (
     <>
       <Description />
+      {/* Компонент Options з кнопками для вибору типу відгуку:
+          - пропс totalFeedback (загальна кіль-ть відгуків)
+          - пропси onLeaveFeedback (функція для обробки відгуку) і onReset (функція для скидання відгуків)*/}
       <Options
         totalFeedback={totalFeedback}
         onLeaveFeedback={updateFeedback}
