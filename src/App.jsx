@@ -44,7 +44,7 @@ function App() {
   const positivePercentage =
     totalFeedback > 0 ? Math.round((good / totalFeedback) * 100) : 0;
 
-  // Функція updateFeedback призначена для оновлення кількості певного типу відгуків.
+  // Функція updateFeedback -> призначена для оновлення кількості певного типу відгуків.
   // Вона приймає один параметр `feedbackType`, який вказує на тип відгуку, що потрібно оновити.
   const updateFeedback = feedbackType => {
     // Оновлює стан `options` за допомогою функції `setOptions`.
